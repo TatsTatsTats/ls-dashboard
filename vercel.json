@@ -7,10 +7,22 @@
         }
     },
     "routes": [
-        { "src": "/build/(.*)", "dest": "/public/build/$1" },
-        { "src": "/resources/(.*)", "dest": "/public/resources/$1" },
-        { "src": "/favicon/(.*)", "dest": "/public/favicon/$1" },
-        { "src": "/(.*)", "dest": "/api/index.php" }
+        {
+            "src": "/build/(.*)",
+            "dest": "/public/build/$1"
+        },
+        {
+            "src": "/css/(.*)",
+            "dest": "/public/css/$1"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/public/js/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.php"
+        }
     ],
     "env": {
         "APP_CONFIG_CACHE": "/tmp/config.php",
