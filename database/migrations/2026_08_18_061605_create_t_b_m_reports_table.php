@@ -1,0 +1,55 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('t_b_m_reports', function (Blueprint $table) {
+            $table->id();
+
+            $table->string('name_of_borrower')->nullable();
+            $table->string('name_of_co_borrower')->nullable();
+            $table->date('application_date')->nullable();
+            $table->string('unit_details')->nullable();
+            $table->string('type_of_transmission')->nullable();
+            $table->decimal('selling_price', 15, 2)->nullable();
+            $table->decimal('amount_finance', 15, 2)->nullable();
+            $table->decimal('downpayment_percentage', 8, 4)->nullable();
+            $table->decimal('downpayment_amount', 15, 2)->nullable();
+            $table->decimal('add_on_rate', 8, 4)->nullable();
+            $table->decimal('net_effective_yield', 8, 4)->nullable();
+            $table->decimal('gross_effective_yield', 8, 4)->nullable();
+            $table->decimal('dealer_incentive_percentage', 8, 4)->nullable();
+            $table->decimal('salesman_incentive_percentage', 8, 4)->nullable();
+            $table->decimal('effective_interest_rate', 8, 4)->nullable();
+            $table->string('employer_or_business_name')->nullable();
+            $table->decimal('total_monthly_income', 15, 2)->nullable();
+            $table->string('industry')->nullable();
+            $table->string('name_of_account_officer')->nullable();
+            $table->string('source_of_application')->nullable();
+            $table->string('name_of_dealer')->nullable();
+            $table->string('branch_name')->nullable();
+            $table->string('name_of_referror')->nullable();
+            $table->string('name_of_company')->nullable();
+            $table->string('name_of_broker')->nullable();
+            
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('t_b_m_reports');
+    }
+};
