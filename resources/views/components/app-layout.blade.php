@@ -11,6 +11,7 @@
     @include('partials.links')
 
     <!-- Styles / Scripts -->
+    {{-- orayt --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link href="https://cdn.datatables.net/v/dt/dt-3.0.2/datatables.min.css" rel="stylesheet">
