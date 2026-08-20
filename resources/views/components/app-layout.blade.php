@@ -11,10 +11,7 @@
     @include('partials.links')
 
     <!-- Styles / Scripts -->
-    @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @else
-    @endif
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <link href="https://cdn.datatables.net/v/dt/dt-3.0.2/datatables.min.css" rel="stylesheet">
     <script src="https://cdn.datatables.net/v/dt/dt-3.0.2/datatables.min.js"></script>
